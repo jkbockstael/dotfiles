@@ -1,0 +1,66 @@
+[user]
+	name = Jean-Karim Bockstael
+	email = jkb@jkbockstael.be
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+
+[gc]
+	# Automatic garbage collection
+	auto = 1
+
+[merge]
+	# Have a summary of the merged commits on merge
+	summary = true
+
+[diff]
+	# Use better prefixes than a or b for diff output
+	# c - commit (usually HEAD)
+	# i - index (staging area)
+	# w - working directory
+	mnemonicPrefix = true
+	compactionHeuristic = true
+
+[pull]
+	# Rebase on pull to avoid useless merge commits
+	rebase = true
+
+[push]
+	# Only try to push the currently active branch, instead of all local branches
+	default = tracking
+
+[core]
+	excludesfile = ~/.gitignore
+
+[alias]
+	cp = cherry-pick -x
+	cb = checkout -b
+	b = branch -vv
+	r = remote -vv
+	s = status
+	st = status --untracked-files=no
+	t = tag -l
+	m = merge --squash
+	l = log --graph --branches --decorate
+	stashall = stash --include-untracked
+	overview = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'
+	amend = commit --amend
+	# Remove the local changes to a file
+	unchange = checkout --
+	# Remove a file from the staging area
+	unstage = reset HEAD
+	# Undo the latest commit
+	uncommit = reset --soft HEAD^
+	# Show all local and remote branches
+	branches = branch -avv
+        # Interactively choose what to add to a commit
+        p = add -i
+        prepare = add -i
+	# Interactively rebase local commits before pushing, a chance to
+	# rephrase commit messages or squash together related commits.
+	rw = rebase -i @{u}
+	rewrite = rebase -i @{u}
