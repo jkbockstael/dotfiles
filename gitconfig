@@ -17,6 +17,10 @@ auto = 1
 # Have a summary of the merged commits on merge
 summary = true
 
+[rerere]
+# Reuse recorded resolution to avoid repeated manual merges
+enabled = true
+
 [diff]
 # Use better prefixes than a or b for diff output
 # c - commit (usually HEAD)
