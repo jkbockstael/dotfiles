@@ -35,7 +35,7 @@ rebase = true
 
 [push]
 # Only try to push the currently active branch, instead of all local branches
-default = tracking
+default = upstream
 
 [core]
 excludesfile = ~/.gitignore
