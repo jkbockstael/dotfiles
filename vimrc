@@ -23,8 +23,15 @@ set showmatch
 syntax on
 set background=dark
 
-" Show line numbers
-set number
+" Show line number and relative number
+set number relativenumber
+
+" Automatically toggle relative numbering
+augroup togglerelativenumbering
+  autocmd!
+  autocmd BufEnter,WinEnter,FocusGained,Insertleave * set relativenumber
+  autocmd BufLeave,WinLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 
 " Indentation settings
 set expandtab
