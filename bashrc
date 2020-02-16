@@ -93,3 +93,11 @@ alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 alias fgrep="fgrep --color=always"
 alias gohome="ssh jkbockstael@jkbockstael.be"
+alias doom-shareware="doom -iwad doom1-shareware.wad" # DOOM Shareware
+alias doom1="doom -iwad ultimate-doom.wad" # The Ultimate Doom
+alias doom-final-plutonia="doom -iwad plutonia.wad" # Final Doom - The Plutonia Experiment
+alias doom-final-tnt="doom -iwad tnt.wad" # Final Doom - TNT: Evilution
+alias doom2="doom -iwad doom2.wad" # Doom II: Hell on Earth
+alias heretic="/usr/games/heretic -iwad heretic.wad" # Heretic: Shadow of the Serpent Riders
+alias hexen="/usr/games/hexen -iwad hexen.wad" # HeXen: Beyond Heretic
+alias hexen-dk="/usr/games/hexen -iwad hexen.wad -file hexdd.wad" # HeXen: Deathkings of the Dark Citadel
