@@ -87,6 +87,8 @@ alias tree="tree -C"
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 alias fgrep="fgrep --color=always"
+alias please="sudo"
+alias fuck='sudo $(history -p !!)'
 alias gohome="ssh jkbockstael@jkbockstael.be"
 alias doom-shareware="doom -iwad doom1-shareware.wad" # DOOM Shareware
 alias doom1="doom -iwad ultimate-doom.wad" # The Ultimate Doom
