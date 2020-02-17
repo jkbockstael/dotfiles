@@ -4,8 +4,8 @@ set wildmode=longest:full,full
 set wildignore=*.swp,*.o,*~,*.pyc
 set wildignorecase
 
-" Always show 7 lines of context around the cursor
-set scrolloff=7
+" Always show 2 lines of context around the cursor
+set scrolloff=2
 
 " Always show current position in document
 set ruler
