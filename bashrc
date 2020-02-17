@@ -75,6 +75,21 @@ promptbasic () { # Command: Change to a basic prompt
 	}
 promptbasic
 
+# Toggle the ThinkLight on my laptop
+togglethinklight () {
+    local LIGHTDEVICE='/sys/class/leds/tpacpi::thinklight/brightness'
+    local MAXBRIGHTNESS='255'
+    local MINBRIGHTNESS='0'
+    if [ $(cat $LIGHTDEVICE) == 0 ]; then
+        echo $MAXBRIGHTNESS | sudo tee $LIGHTDEVICE > /dev/null
+    else
+        echo $MINBRIGHTNESS | sudo tee $LIGHTDEVICE > /dev/null
+    fi
+}
+
+# Use the ThinkLight for notification
+alias flash='togglethinklight;sleep 1;togglethinklight'
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -l"
