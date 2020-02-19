@@ -116,3 +116,38 @@ map <leader>hl :setlocal hlsearch!<cr>
 let netrw_liststyle=3
 let g:netrw_liststyle=3
 map <leader>f :Explore<cr>
+
+" Greek letters
+map! <C-g>GA Γ
+map! <C-g>DE Δ
+map! <C-g>TH Θ
+map! <C-g>LA Λ
+map! <C-g>XI Ξ
+map! <C-g>PI Π
+map! <C-g>SI Σ
+map! <C-g>PH Φ
+map! <C-g>PS Ψ
+map! <C-g>OM Ω
+map! <C-g>al α
+map! <C-g>be β
+map! <C-g>ga γ
+map! <C-g>de δ
+map! <C-g>ep ε
+map! <C-g>ze ζ
+map! <C-g>et η
+map! <C-g>th θ
+map! <C-g>io ι
+map! <C-g>ka κ
+map! <C-g>la λ
+map! <C-g>mu μ
+map! <C-g>nu ν
+map! <C-g>xi ξ
+map! <C-g>pi π
+map! <C-g>rh ρ
+map! <C-g>si σ
+map! <C-g>ta τ
+map! <C-g>up υ
+map! <C-g>ph φ
+map! <C-g>ch χ
+map! <C-g>ps ψ
+map! <C-g>om ω
