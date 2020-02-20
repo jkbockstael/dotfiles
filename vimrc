@@ -121,6 +121,12 @@ let netrw_liststyle=3
 let g:netrw_liststyle=3
 map <leader>f :Explore<cr>
 
+" Shell
+" escape to shell
+map <leader>sh :sh<cr>
+" expand in shell
+map <leader>SH !!sh<cr>
+
 " Greek letters
 map! <C-g>GA Γ
 map! <C-g>DE Δ
