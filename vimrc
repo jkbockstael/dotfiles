@@ -59,7 +59,7 @@ inoremap <c-@> <c-x><c-o>
 " Limit Git commit messages to an acceptable width, and spellcheck them
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Use the , key as the command leader
+" Use the space key as the command leader
 let mapleader=" "
 let g:mapleader=" "
 
