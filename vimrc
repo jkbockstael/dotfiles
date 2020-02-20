@@ -96,6 +96,10 @@ noremap <a-l> gt
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+" Clipboard
+vnoremap <C-c> "+y
+map <C-v> "+p
+
 " Spell-checking
 set spelllang=en_us
 " Toggle spell-checking
