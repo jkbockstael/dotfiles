@@ -102,6 +102,7 @@ alias tree="tree -C"
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 alias fgrep="fgrep --color=always"
+alias iddad="sudo -s"
 alias please="sudo"
 alias fuck='sudo $(history -p !!)'
 alias gohome="ssh jkbockstael@jkbockstael.be"
