@@ -1,4 +1,5 @@
 " Wild Menu (commands autocompletion on tab)
+set path+=**
 set wildmenu
 set wildmode=longest:full,full
 set wildignore=*.swp,*.o,*~,*.pyc
