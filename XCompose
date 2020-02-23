@@ -1,0 +1,4 @@
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+<Multi_key> <period> <backslash> : "λ" U03BB # GREEK SMALL LETTER LAMBDA
+<Multi_key> <backslash> <period> : "λ" U03BB # GREEK SMALL LETTER LAMBDA
