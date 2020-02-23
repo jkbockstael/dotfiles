@@ -90,6 +90,15 @@ togglethinklight () {
 # Use the ThinkLight for notification
 alias flash='togglethinklight;sleep 1;togglethinklight'
 
+# ROT13 function/filter
+rot13() {
+    if [ $# -eq 0 ]; then
+        tr '[a-m][n-z][A-M][N-Z]' '[n-z][a-m][N-Z][A-M]'
+    else
+        echo $* | tr '[a-m][n-z][A-M][N-Z]' '[n-z][a-m][N-Z][A-M]'
+    fi
+}
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -l"
