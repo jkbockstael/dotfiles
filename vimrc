@@ -23,6 +23,7 @@ set showmatch
 " Syntax coloring
 syntax on
 set background=dark
+colorscheme peachpuff
 
 " Show line number and relative number
 set number relativenumber
