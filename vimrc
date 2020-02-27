@@ -55,8 +55,6 @@ set foldmethod=manual " Use zf to create a fold from current selection, use za t
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 inoremap <c-space> <c-x><c-o>
-" Some terminals don't properly report ctrl-space
-inoremap <c-@> <c-x><c-o>
 " Close the preview and go back to insert mode
 inoremap <leader>cp <c-o>:pclose<cr>
 
