@@ -58,8 +58,9 @@ inoremap <c-space> <c-x><c-o>
 " Some terminals don't properly report ctrl-space
 inoremap <c-@> <c-x><c-o>
 " Close the preview and go back to insert mode
-inoremap <c-m> <c-o>:pclose<cr>
+inoremap <leader>cp <c-o>:pclose<cr>
 
+"
 " Limit Git commit messages to an acceptable width, and spellcheck them
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
