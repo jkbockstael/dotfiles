@@ -111,10 +111,20 @@ map <leader>ss :setlocal spell!<cr>
 map <leader>sn ]s
 " Go to previous error
 map <leader>sp [s
-" Add to personal dictionary
-map <leader>sa zg
 " Correction suggestions
 map <leader>s? z=
+" Add to personal dictionary
+map <leader>sg zg
+" Add to personal wrong-words list
+map <leader>sw zw
+" Remove from personal dictionary
+map <leader>sug zug
+" Remove from personal wrong-words list
+map <leader>suw zuw
+" Switch spell-checking language to English
+map <leader>sen :set spelllang=en_us<cr>
+" Switch spell-checking language to French
+map <leader>sfr :set spelllang=fr<cr>
 
 " Toggle search results highlighting
 map <leader>hl :setlocal hlsearch!<cr>
