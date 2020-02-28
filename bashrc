@@ -68,7 +68,7 @@ promptbasic () { # Command: Change to a basic prompt
 		xterm*)	TITLEBAR="$TERMDEFAULT\u@\h:\w" ;;
 		*)		TITLEBAR="" ;;
 	esac
-	PS1="${TERMDEFAULT}[${LIGHTRED}\u @ \h ${LIGHTGREEN}\W${TERMDEFAULT}]\$ "
+	PS1="${TERMDEFAULT}[${LIGHTRED}\u @ \h ${LIGHTGREEN}\W${TERMDEFAULT}]\\$ "
 	PS3="${TERMDEFAULT}> ${TERMDEFAULT}"
 	PS4="${TERMDEFAULT}+ ${TERMDEFAULT}"
 	export PS1 PS2 PS4
