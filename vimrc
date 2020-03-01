@@ -55,10 +55,8 @@ set foldmethod=manual " Use zf to create a fold from current selection, use za t
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 inoremap <c-space> <c-x><c-o>
-" Close the preview and go back to insert mode
-inoremap <leader>cp <c-o>:pclose<cr>
+imap <c-@> <c-space>
 
-"
 " Limit Git commit messages to an acceptable width, and spellcheck them
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
