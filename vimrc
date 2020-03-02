@@ -101,6 +101,9 @@ map <leader>pp :setlocal paste!<cr>
 vnoremap <C-c> "+y
 map <C-v> "+p
 
+" Sudo write
+noremap <leader>ww :w !sudo tee % >/dev/null<cr><cr>
+
 " Spell-checking
 set spelllang=en_us
 " Toggle spell-checking
