@@ -99,6 +99,19 @@ rot13() {
     fi
 }
 
+# Block until a specific date/time
+# Usage: sleep-until tomorrow 16:30; echo "foobar"
+sleep-until() {
+    if [ $# -eq 0 ]; then
+        echo "sleep-until: no date string provided" >&2
+        return 1
+    fi
+    local now=$(date +%s)
+    local target=$(date --date "$*" +%s)
+    local duration=$(( $target - $now ))
+    sleep $duration
+}
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -l"
