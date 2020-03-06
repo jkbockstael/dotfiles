@@ -1,3 +1,4 @@
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -60,19 +61,15 @@ export PAGER EDITOR VISUAL HISTFILE
 
 # Prompt
 promptbasic () { # Command: Change to a basic prompt
-	local TERMDEFAULT='\[\e[0m\]'
-	local BOLDGRAY='\[\e[30;1m\]'
-	local LIGHTRED='\[\e[0;31m\]'
-	local LIGHTGREEN='\[\e[0;32m\]'
-	case $TERM in
-		xterm*)	TITLEBAR="$TERMDEFAULT\u@\h:\w" ;;
-		*)		TITLEBAR="" ;;
-	esac
-	PS1="${TERMDEFAULT}[${LIGHTRED}\u @ \h ${LIGHTGREEN}\W${TERMDEFAULT}]\\$ "
-	PS3="${TERMDEFAULT}> ${TERMDEFAULT}"
-	PS4="${TERMDEFAULT}+ ${TERMDEFAULT}"
-	export PS1 PS2 PS4
-	}
+    local default=$(tput sgr0)
+    local gray=$(tput setaf 236)
+    local red=$(tput setaf 52)
+    local green=$(tput setaf 22)
+    PS1="${gray}[${red}\u @ \h ${green}\W${gray}]\\$ ${default}"
+    PS3="${gray}> ${default}"
+    PS4="${gray}+ ${default}"
+    export PS1 PS2 PS4
+}
 promptbasic
 
 # Toggle the ThinkLight on my laptop
