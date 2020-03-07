@@ -109,6 +109,28 @@ sleep-until() {
     sleep $duration
 }
 
+# Force-toggle Night Light on
+nightlight-on() {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic false
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 0
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 24
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+
+}
+
+# Force-toggle Night Light off
+nightlight-off() {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
+}
+
+# Set Night Light to automatic mode
+nightlight-auto() {
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 20
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 6
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+}
+
 # Aliases
 alias ls="ls --color"
 alias ll="ls -l"
