@@ -1,4 +1,3 @@
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -64,8 +63,13 @@ promptbasic () { # Command: Change to a basic prompt
     local default=$(tput sgr0)
     local gray=$(tput setaf 236)
     local red=$(tput setaf 52)
+    local brightred=$(tput setaf 124)
     local green=$(tput setaf 22)
-    PS1="${gray}[${red}\u @ \h ${green}\W${gray}]\\$ ${default}"
+    local usercolor=$red
+    if [ "$USER" == "root" ]; then
+        usercolor=$brightred
+    fi
+    PS1="${gray}[${usercolor}\u @ \h ${green}\W${gray}]\\$ ${default}"
     PS3="${gray}> ${default}"
     PS4="${gray}+ ${default}"
     export PS1 PS2 PS4
