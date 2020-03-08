@@ -10,7 +10,7 @@ rendition so = Kw
 # %{.K} set text color to bright black
 # %+w   show all windows after the current one
 # %=    pad to the screen width (so the following parts are right-aligned)
-# %S    show the session name between brackets
+# %S    show the session name
 # %c    clock, in 24-hours HH:MM format
 # :%s   seconds, after a colon
 hardstatus alwayslastline " %{.K}%-w%{.w}%n %t%{.K}%+w%=%S%{.w} %c:%s "
