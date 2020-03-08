@@ -3,4 +3,10 @@ startup_message off
 # Border color ("bright black" background, white text)
 rendition so = Kw
 # Status line
-hardstatus alwayslastline "%w"
+# %{.K} set text color to bright black
+# %-w   show all windows before the current one
+# %{.w} set text color to white
+# %n %t show the current window numer and title
+# %{.K} set text color to bright black
+# %+w   show all windows after the current one
+hardstatus alwayslastline "%{.K}%-w%{.w}%n %t%{.K}%+w"
