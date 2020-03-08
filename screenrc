@@ -1,1 +1,6 @@
+# Skip the startup page
+startup_message off
+# Border color ("bright black" background, white text)
+rendition so = Kw
+# Status line
 hardstatus alwayslastline "%w"
