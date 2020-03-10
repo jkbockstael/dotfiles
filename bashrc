@@ -59,17 +59,54 @@ HISTFILE=~/.bash_history
 export PAGER EDITOR VISUAL HISTFILE
 
 # Prompt
+prompt-git-info () {
+    # Get Git status, if applicable
+    local git_info="";
+    if [ $(git rev-parse --is-inside-work-tree &> /dev/null; echo "${?}") == "0" ]; then
+        git_info+=" (";
+        # Current branch name
+        git_info+="$(git symbolic-ref --quiet --short HEAD)";
+        # Status
+        git_status="$(git status)";
+        dir_status="";
+        if [ $(echo "${git_status}" | grep --silent "Your branch is behind"; echo "${?}") == "0" ]; then
+            dir_status+="↓";
+            dir_status+=$(echo "${git_status}" | grep 'Your branch is behind' | cut -d' ' -f7);
+        fi
+        if [ $(echo "${git_status}" | grep --silent "Your branch is ahead"; echo "${?}") == "0" ]; then
+            dir_status+="↑";
+            dir_status+=$(echo "${git_status}" | grep 'Your branch is ahead' | cut -d' ' -f8);
+        fi
+        if [ "${dir_status}" != "" ]; then
+            git_info+=" ${dir_status}";
+        fi
+        dirtiness="";
+        if [ $(echo "${git_status}" | grep --silent "Changes to be committed"; echo "${?}") == "0" ]; then
+            dirtiness+="•";
+        fi
+        if [ $(echo "${git_status}" | grep --silent "Changes not staged"; echo "${?}") == "0" ]; then
+            dirtiness+="±";
+        fi
+        if [ "${dirtiness}" != "" ]; then
+            git_info+=" ${dirtiness}";
+        fi
+        git_info+=")";
+    fi
+    echo "${git_info}";
+}
+
 promptbasic () { # Command: Change to a basic prompt
     local default=$(tput sgr0)
     local gray=$(tput setaf 236)
     local red=$(tput setaf 52)
     local brightred=$(tput setaf 124)
     local green=$(tput setaf 22)
+    local blue=$(tput setaf 27)
     local usercolor=$red
     if [ "$USER" == "root" ]; then
         usercolor=$brightred
     fi
-    PS1="${gray}[${usercolor}\u @ \h ${green}\W${gray}]\\$ ${default}"
+    PS1="${gray}[${usercolor}\u @ \h ${green}\W${blue}\$(prompt-git-info)${gray}]\\$ ${default}"
     PS3="${gray}> ${default}"
     PS4="${gray}+ ${default}"
     export PS1 PS2 PS4
