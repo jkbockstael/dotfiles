@@ -77,6 +77,11 @@ prompt-git-info () {
             dir_status+="↑";
             dir_status+=$(echo "${git_status}" | grep 'Your branch is ahead' | cut -d' ' -f8);
         fi
+        git_stash_list="$(git stash list)";
+        if [ $(echo "${git_stash_list}" | wc -l) != "0" ]; then
+            dir_status+="≡";
+            dir_status+=$(echo "${git_stash_list}" | wc -l);
+        fi
         if [ "${dir_status}" != "" ]; then
             git_info+=" ${dir_status}";
         fi
