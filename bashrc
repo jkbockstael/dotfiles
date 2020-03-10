@@ -61,43 +61,43 @@ export PAGER EDITOR VISUAL HISTFILE
 # Prompt
 prompt-git-info () {
     # Get Git status, if applicable
-    local git_info="";
+    local git_info=""
     if [ $(git rev-parse --is-inside-work-tree &> /dev/null; echo "${?}") == "0" ]; then
-        git_info+=" (";
+        git_info+=" ("
         # Current branch name
-        git_info+="$(git symbolic-ref --quiet --short HEAD)";
+        git_info+="$(git symbolic-ref --quiet --short HEAD)"
         # Status
-        git_status="$(git status)";
-        dir_status="";
+        git_status="$(git status)"
+        dir_status=""
         if [ $(echo "${git_status}" | grep --silent "Your branch is behind"; echo "${?}") == "0" ]; then
-            dir_status+="↓";
-            dir_status+=$(echo "${git_status}" | grep 'Your branch is behind' | cut -d' ' -f7);
+            dir_status+="↓"
+            dir_status+=$(echo "${git_status}" | grep 'Your branch is behind' | cut -d' ' -f7)
         fi
         if [ $(echo "${git_status}" | grep --silent "Your branch is ahead"; echo "${?}") == "0" ]; then
-            dir_status+="↑";
-            dir_status+=$(echo "${git_status}" | grep 'Your branch is ahead' | cut -d' ' -f8);
+            dir_status+="↑"
+            dir_status+=$(echo "${git_status}" | grep 'Your branch is ahead' | cut -d' ' -f8)
         fi
-        git_stash_list="$(git stash list)";
+        git_stash_list="$(git stash list)"
         if [ $(echo "${git_stash_list}" | wc -l) != "0" ]; then
-            dir_status+="≡";
-            dir_status+=$(echo "${git_stash_list}" | wc -l);
+            dir_status+="≡"
+            dir_status+=$(echo "${git_stash_list}" | wc -l)
         fi
         if [ "${dir_status}" != "" ]; then
-            git_info+=" ${dir_status}";
+            git_info+=" ${dir_status}"
         fi
-        dirtiness="";
+        dirtiness=""
         if [ $(echo "${git_status}" | grep --silent "Changes to be committed"; echo "${?}") == "0" ]; then
-            dirtiness+="•";
+            dirtiness+="•"
         fi
         if [ $(echo "${git_status}" | grep --silent "Changes not staged"; echo "${?}") == "0" ]; then
-            dirtiness+="±";
+            dirtiness+="±"
         fi
         if [ "${dirtiness}" != "" ]; then
-            git_info+=" ${dirtiness}";
+            git_info+=" ${dirtiness}"
         fi
-        git_info+=")";
+        git_info+=")"
     fi
-    echo "${git_info}";
+    echo "${git_info}"
 }
 
 promptbasic () { # Command: Change to a basic prompt
