@@ -1,0 +1,46 @@
+# Motion
+keymap h MOVE_LEFT
+keymap j MOVE_DOWN
+keymap k MOVE_UP
+keymap l MOVE_RIGHT
+keymap \^ LINE_BEGIN
+keymap $ LINE_END
+keymap gg BEGIN
+keymap G END
+keymap w NEXT_WORD
+keymap b PREV_WORD
+keymap u UNDO
+keymap C-y UP
+keymap C-e DOWN
+keymap C-d NEXT_PAGE
+keymap C-u PREV_PAGE
+
+# Navigation
+keymap [ PREV_LINK
+keymap ] NEXT_LINK
+keymap o GOTO
+keymap O TAB_GOTO
+keymap \\ TAB_LINK
+keymap C-o PREV
+keymap C-i NEXT
+
+# Search
+keymap / ISEARCH
+keymap ? ISEARCH_BACK
+keymap n SEARCH_NEXT
+keymap N SEARCH_PREV
+
+# Tabs
+keymap gt NEXT_TAB
+keymap gT PREV_TAB
+keymap tn NEW_TAB
+keymap tc CLOSE_TAB
+keymap T TAB_MENU
+
+# Settings and misc
+keymap ESC-a ADD_BOOKMARK
+keymap ESC-b VIEW_BOOKMARK
+keymap ESC-o OPTIONS
+keymap ESC-c COMMAND
+keymap ESC-h HISTORY
+keymap H HELP
