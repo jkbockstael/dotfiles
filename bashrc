@@ -222,3 +222,4 @@ alias doom2="doom -iwad doom2.wad" # Doom II: Hell on Earth
 alias heretic="/usr/games/heretic -iwad heretic.wad" # Heretic: Shadow of the Serpent Riders
 alias hexen="/usr/games/hexen -iwad hexen.wad" # HeXen: Beyond Heretic
 alias hexen-dk="/usr/games/hexen -iwad hexen.wad -file hexdd.wad" # HeXen: Deathkings of the Dark Citadel
+alias t='/usr/bin/time -f "\nMemory used (kB): %M\nUser time (seconds): %U"'
