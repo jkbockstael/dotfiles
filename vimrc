@@ -130,6 +130,10 @@ map <leader>sfr :set spelllang=fr<cr>
 " Toggle search results highlighting
 map <leader>hl :setlocal hlsearch!<cr>
 
+" Toggle 80 columns indicator
+highlight ColorColumn ctermbg=233
+map <expr> <leader>cc &cc ? ':set cc=0<cr>' : ':set cc=81<cr>'
+
 " File explorer
 let netrw_liststyle=3
 let g:netrw_liststyle=3
