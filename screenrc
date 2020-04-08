@@ -27,3 +27,21 @@ bind ( resize -1
 bind ) resize +1
 # I like the blank window to be before the others, not after
 bind ` select -
+# Layouts
+# Sizes are tuned to a 213 columns terminal
+layout autosave on
+bind , layout next
+# Layout: single window
+layout new one
+# Layout: two columns
+layout new two columns
+split -v
+# Layout: three columns, central one can show 80 cols in vim
+layout new three-columns
+split -v
+split -v
+resize 63
+focus
+resize 85
+# Default layout
+layout select one
