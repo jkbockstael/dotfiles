@@ -45,3 +45,6 @@ focus
 resize 85
 # Default layout
 layout select one
+# Monitoring
+bind m monitor
+bind s silence
