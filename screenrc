@@ -14,3 +14,8 @@ rendition so = Kw
 # %c    clock, in 24-hours HH:MM format
 # :%s   seconds, after a colon
 hardstatus alwayslastline " %{.K}%-w%{.w}%n %t%{.K}%+w%=%S%{.w} %c:%s "
+# Vim-like navigation for regions
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
