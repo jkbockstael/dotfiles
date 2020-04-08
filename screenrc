@@ -19,3 +19,11 @@ bind h focus left
 bind j focus down
 bind k focus up
 bind l focus right
+bind g focus top
+bind G focus bottom
+bind o only
+# Incremental resizing
+bind ( resize -1
+bind ) resize +1
+# I like the blank window to be before the others, not after
+bind ` select -
