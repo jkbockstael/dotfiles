@@ -41,8 +41,28 @@ bind , layout next
 # Layout: single window
 layout new one
 # Layout: two columns
-layout new two columns
+layout new two-columns
 split -v
+# Layout: two rows
+layout new two-rows
+split
+# Layout: two columns and two rows
+layout new two-by-two
+split -v
+split
+focus right
+split
+focus top
+# Layout: three columns and two rows
+layout new three-by-two
+split -v
+split -v
+split
+focus right
+split
+focus right
+split
+focus top
 # Layout: three columns, central one can show 80 cols in vim
 layout new three-columns
 split -v
@@ -50,8 +70,32 @@ split -v
 resize 63
 focus
 resize 85
+# Layout: three columns, central fits 80 cols, side ones are split in two
+layout new three-columns-two
+split -v
+split -v
+resize 63
+split
+focus right
+resize 85
+focus right
+split
+focus left
+# Layout: three columns, central fits 80 cols, side ones are split in three
+layout new three-columns-three
+split -v
+split -v
+resize 63
+split
+split
+focus right
+resize 85
+focus right
+split
+split
+focus left
 # Default layout
-layout select one
+layout select three-columns
 # Monitoring
 bind m monitor
 bind s silence
