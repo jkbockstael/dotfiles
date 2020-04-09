@@ -23,8 +23,13 @@ bind g focus top
 bind G focus bottom
 bind o only
 # Incremental resizing
-bind ( resize -1
-bind ) resize +1
+bind - resize -1
+bind _ resize +1
+# Windows swapping
+bind ( bumpleft
+bind ) bumpright
+# Windows numbers collapsing
+bind = collapse
 # I like the blank window to be before the others, not after
 bind ` select -
 # Layouts
