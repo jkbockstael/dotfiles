@@ -53,3 +53,5 @@ layout select one
 # Monitoring
 bind m monitor
 bind s silence
+# Clean up after exiting interactive programs
+altscreen on
