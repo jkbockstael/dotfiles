@@ -21,7 +21,7 @@ bind k focus up
 bind l focus right
 bind g focus top
 bind G focus bottom
-bind o only
+bind O only
 # Remove a region
 bind x remove
 # Incremental resizing
