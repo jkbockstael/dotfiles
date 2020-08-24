@@ -43,6 +43,7 @@ excludesfile = ~/.gitignore
 [alias]
 cp = cherry-pick -x
 cb = checkout -b
+c = checkout
 b = branch -vv
 r = remote -vv
 s = status
