@@ -101,10 +101,10 @@ prompt-git-info () {
 
 promptbasic () { # Command: Change to a basic prompt
     local default="\[$(tput sgr0)\]"
-    local gray="\[$(tput setaf 236)\]"
-    local red="\[$(tput setaf 52)\]"
-    local brightred="\[$(tput setaf 124)\]"
-    local green="\[$(tput setaf 22)\]"
+    local gray="\[$(tput setaf 240)\]"
+    local red="\[$(tput setaf 124)\]"
+    local brightred="\[$(tput setaf 196)\]"
+    local green="\[$(tput setaf 28)\]"
     local blue="\[$(tput setaf 27)\]"
     local usercolor=$red
     if [ "$USER" == "root" ]; then
