@@ -213,7 +213,7 @@ alias fgrep="fgrep --color=always"
 alias iddad="sudo -s"
 alias please="sudo"
 alias fuck='sudo $(history -p !!)'
-alias gohome="ssh jkbockstael@jkbockstael.be"
+alias gohome="ssh jkb@jkbockstael.be"
 alias doom-shareware="doom -iwad doom1-shareware.wad" # DOOM Shareware
 alias doom1="doom -iwad ultimate-doom.wad" # The Ultimate Doom
 alias doom-final-plutonia="doom -iwad plutonia.wad" # Final Doom - The Plutonia Experiment
