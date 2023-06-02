@@ -67,17 +67,17 @@ focus top
 layout new three-columns
 split -v
 split -v
-resize 63
+resize 33
 focus
-resize 85
+resize 86
 # Layout: three columns, central fits 80 cols, side ones are split in two
 layout new three-columns-two
 split -v
 split -v
-resize 63
+resize 33
 split
 focus right
-resize 85
+resize 86
 focus right
 split
 focus left
@@ -85,11 +85,11 @@ focus left
 layout new three-columns-three
 split -v
 split -v
-resize 63
+resize 33
 split
 split
 focus right
-resize 85
+resize 86
 focus right
 split
 split
